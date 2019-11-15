@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText et1, et2;
     private  ProgressBar pb1;
-    private Button btn;
+    private Button btn, btn_ex;
 
 
     @Override
@@ -27,8 +27,16 @@ public class MainActivity extends AppCompatActivity {
         et2 = (EditText) findViewById(R.id.et2);
         pb1 = (ProgressBar) findViewById(R.id.pb1);
         btn = (Button) findViewById(R.id.btn);
+        btn_ex = (Button) findViewById(R.id.btn_ex);
 
         pb1.setVisibility(View.INVISIBLE);
+
+        btn_ex.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.exit(0);
+            }
+        });
 
 
         btn.setOnClickListener(new View.OnClickListener() {
